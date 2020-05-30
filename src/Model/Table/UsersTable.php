@@ -56,7 +56,8 @@ class UsersTable extends Table
 			->notEmpty('username', 'A user name is actually required');
         $validator
             ->scalar('password')
-            ->allowEmptyString('password');
+            //->allowEmptyString('password');
+			->notEmpty('password', 'You must create a valid password');
 
         $validator
             ->scalar('first_name')

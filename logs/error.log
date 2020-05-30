@@ -2553,3 +2553,46 @@ Request URL: /users/msf-step/1
 Referer URL: http://localhost:3131/users/msfindex
 
 
+2020-05-26 18:52:03 Error: [PDOException] SQLSTATE[23000]: Integrity constraint violation: 19 NOT NULL constraint failed: users.password (C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php:173)
+#0 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): PDOStatement->execute(NULL)
+#1 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Statement\BufferedStatement.php(146): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#2 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Statement\SqliteStatement.php(40): Cake\Database\Statement\BufferedStatement->execute(NULL)
+#3 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Statement\StatementDecorator.php(173): Cake\Database\Statement\SqliteStatement->execute(NULL)
+#4 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Log\LoggingStatement.php(55): Cake\Database\Statement\StatementDecorator->execute(NULL)
+#5 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Connection.php(333): Cake\Database\Log\LoggingStatement->execute()
+#6 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Core\Retry\CommandRetry.php(67): Cake\Database\Connection->Cake\Database\{closure}()
+#7 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Connection.php(336): Cake\Core\Retry\CommandRetry->run(Object(Closure))
+#8 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Query.php(218): Cake\Database\Connection->run(Object(Cake\ORM\Query))
+#9 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\ORM\Table.php(2129): Cake\Database\Query->execute()
+#10 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\ORM\Table.php(2021): Cake\ORM\Table->_insert(Object(App\Model\Entity\User), Array)
+#11 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\ORM\Table.php(1934): Cake\ORM\Table->_processSave(Object(App\Model\Entity\User), Object(ArrayObject))
+#12 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\ORM\Table.php(1639): Cake\ORM\Table->Cake\ORM\{closure}()
+#13 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Database\Connection.php(737): Cake\ORM\Table->Cake\ORM\{closure}(Object(Cake\Database\Connection))
+#14 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\ORM\Table.php(1640): Cake\Database\Connection->transactional(Object(Closure))
+#15 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\ORM\Table.php(1935): Cake\ORM\Table->_executeTransaction(Object(Closure), true)
+#16 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\src\Controller\UsersController.php(119): Cake\ORM\Table->save(Object(App\Model\Entity\User))
+#17 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Controller\Controller.php(609): App\Controller\UsersController->msfStep('4')
+#18 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(120): Cake\Controller\Controller->invokeAction()
+#19 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\ActionDispatcher.php(94): Cake\Http\ActionDispatcher->_invoke(Object(App\Controller\UsersController))
+#20 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\BaseApplication.php(234): Cake\Http\ActionDispatcher->dispatch(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#21 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\BaseApplication->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#22 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#23 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Middleware\CsrfProtectionMiddleware.php(124): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#24 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Http\Middleware\CsrfProtectionMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#25 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#26 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Routing\Middleware\RoutingMiddleware.php(168): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#27 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\RoutingMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#28 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Routing\Middleware\AssetMiddleware.php(88): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#29 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Routing\Middleware\AssetMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#30 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Error\Middleware\ErrorHandlerMiddleware.php(96): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#31 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): Cake\Error\Middleware\ErrorHandlerMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#32 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\debug_kit\src\Middleware\DebugKitMiddleware.php(53): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#33 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(65): DebugKit\Middleware\DebugKitMiddleware->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response), Object(Cake\Http\Runner))
+#34 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Runner.php(51): Cake\Http\Runner->__invoke(Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#35 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\vendor\cakephp\cakephp\src\Http\Server.php(97): Cake\Http\Runner->run(Object(Cake\Http\MiddlewareQueue), Object(Cake\Http\ServerRequest), Object(Cake\Http\Response))
+#36 C:\Users\bob\Documents\PHP_WebSites\cake_MultistepForms\webroot\index.php(40): Cake\Http\Server->run()
+#37 {main}
+Request URL: /users/msf-step/4
+Referer URL: http://localhost:3131/users/msf-step/4
+
+

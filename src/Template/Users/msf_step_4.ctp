@@ -1,5 +1,7 @@
-<div class="container">
-<div class="medium-6 columns">
+<div class="row"
+<p></p>
+<div class="large-4 large-centered columns panel">
+<h4>Please enter the following ...</h4>
 <?php
 // Template/Users/msf_step_4.ctp
 echo $this->Form->create('User');
